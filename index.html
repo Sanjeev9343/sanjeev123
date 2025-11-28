@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaClone - Share Your Moments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <span>InstaClone</span>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="nav-icons">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-plus-square" id="createPostBtn"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="profile-icon">
+                    <i class="far fa-user-circle"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Feed Section -->
+        <div class="feed-section">
+            <!-- Stories -->
+            <div class="stories-container">
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>Your Story</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>user1</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>user2</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>user3</span>
+                </div>
+            </div>
+
+            <!-- Posts Feed -->
+            <div class="posts-container" id="postsContainer">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <span class="username">your_username</span>
+                    <span class="fullname">Your Name</span>
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <div class="suggestions-header">
+                    <span>Suggestions for you</span>
+                    <a href="#">See All</a>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggestion1</span>
+                        <span class="suggestion-text">New to InstaClone</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="suggestion-info">
+                        <span class="suggestion-username">suggestion2</span>
+                        <span class="suggestion-text">Followed by user1</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div class="modal" id="createPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Post</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop an image here or click to select</p>
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="preview-area" id="previewArea" style="display: none;">
+                    <img id="previewImage" src="" alt="Preview">
+                </div>
+                <div class="post-caption">
+                    <textarea id="captionInput" placeholder="Write a caption..."></textarea>
+                </div>
+                <button class="post-btn" id="submitPost">Share Post</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
